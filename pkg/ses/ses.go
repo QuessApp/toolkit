@@ -3,7 +3,7 @@ package ses
 import (
 	"context"
 
-	"github.com/KuriozApp/toolkit/pkg/entities"
+	"github.com/kuriozapp/toolkit/pkg/entities"
 
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"
