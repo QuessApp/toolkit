@@ -2,7 +2,6 @@ package ses
 
 import (
 	"context"
-	"log"
 
 	"github.com/KuriozApp/toolkit/pkg/entities"
 
@@ -14,8 +13,8 @@ import (
 )
 
 // Configure configures AWS SES client.
-func Configure(accessKey, secretKey, region string) *sesv2.Client {
-	amazonConfiguration, createAmazonConfigurationError :=
+func Configure(accessKey, secretKey, region string) (*sesv2.Client, error) {
+	amazonConfiguration, err :=
 		config.LoadDefaultConfig(
 			context.Background(),
 			config.WithRegion(region),
@@ -26,11 +25,7 @@ func Configure(accessKey, secretKey, region string) *sesv2.Client {
 			),
 		)
 
-	if createAmazonConfigurationError != nil {
-		log.Fatal(createAmazonConfigurationError)
-	}
-
-	return sesv2.NewFromConfig(amazonConfiguration)
+	return sesv2.NewFromConfig(amazonConfiguration), err
 }
 
 // SendToSES sends an email through SES.
