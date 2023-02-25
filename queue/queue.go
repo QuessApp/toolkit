@@ -11,13 +11,13 @@ func Connect(connUri string) (*amqp.Connection, *amqp.Channel) {
 	conn, err := amqp.Dial(connUri)
 
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
 	}
 
 	ch, err := conn.Channel()
 
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
 	}
 
 	log.Printf("Successfully connected to MQ instance at %s \n", connUri)
