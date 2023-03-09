@@ -1,4 +1,4 @@
-module github.com/kuriozapp/toolkit
+module github.com/quess/toolkit
 
 go 1.20
 
