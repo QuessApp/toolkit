@@ -2,8 +2,8 @@ package responses
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/quess/toolkit/entities"
-	"github.com/quess/toolkit/errors"
+	"github.com/quessapp/toolkit/entities"
+	"github.com/quessapp/toolkit/errors"
 )
 
 // ParseSuccessful parses a successfull response and normalizes to a specif json format.

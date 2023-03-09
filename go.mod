@@ -1,4 +1,4 @@
-module github.com/quess/toolkit
+module github.com/quessapp/toolkit
 
 go 1.20
 
