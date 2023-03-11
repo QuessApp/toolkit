@@ -11,16 +11,16 @@ import (
 
 // S3Credentials represents the AWS S3 credentials.
 type S3Credentials struct {
-	ID     string
-	Secret string
-	Token  string
+	AccessKey string
+	Secret    string
+	Token     string
 }
 
 // Configure configures AWS S3 client.
 func Configure(region *string, S3credentials *S3Credentials) (*s3.S3, error) {
 	sess, err := session.NewSession(&aws.Config{
 		Region:      region,
-		Credentials: credentials.NewStaticCredentials(S3credentials.ID, S3credentials.Secret, S3credentials.Token),
+		Credentials: credentials.NewStaticCredentials(S3credentials.AccessKey, S3credentials.Secret, S3credentials.Token),
 	})
 
 	if err != nil {
@@ -31,10 +31,11 @@ func Configure(region *string, S3credentials *S3Credentials) (*s3.S3, error) {
 }
 
 // UploadFile uploads file to S3.
-func UploadFile(client *s3.S3, fileName, bucketName string, file io.ReadSeeker) (*s3.PutObjectOutput, error) {
+func UploadFile(client *s3.S3, fileName, bucketName string, file io.ReadSeeker, acl *string) (*s3.PutObjectOutput, error) {
 	return client.PutObject(&s3.PutObjectInput{
 		Bucket: &bucketName,
 		Key:    aws.String(fileName),
 		Body:   file,
+		ACL:    acl,
 	})
 }
