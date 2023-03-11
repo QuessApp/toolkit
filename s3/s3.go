@@ -33,7 +33,7 @@ func Configure(region *string, S3credentials *S3Credentials) (*s3.S3, error) {
 // UploadFile uploads file to S3.
 func UploadFile(client *s3.S3, fileName, bucketName string, file io.ReadSeeker, acl *string) (*s3.PutObjectOutput, error) {
 	return client.PutObject(&s3.PutObjectInput{
-		Bucket: &bucketName,
+		Bucket: aws.String(bucketName),
 		Key:    aws.String(fileName),
 		Body:   file,
 		ACL:    acl,
