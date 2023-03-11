@@ -41,7 +41,7 @@ func UploadFile(client *s3.S3, fileName, bucketName string, file io.ReadSeeker, 
 }
 
 // DeleteFile deletes file from S3.
-func DeleteFile(client *s3.S3, fileName, bucketName string, file io.ReadSeeker, acl *string) (*s3.DeleteObjectOutput, error) {
+func DeleteFile(client *s3.S3, fileName, bucketName string) (*s3.DeleteObjectOutput, error) {
 	return client.DeleteObject(&s3.DeleteObjectInput{
 		Bucket: aws.String(bucketName),
 		Key:    aws.String(fileName),
