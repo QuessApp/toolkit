@@ -17,11 +17,17 @@ type S3Credentials struct {
 }
 
 // Configure configures AWS S3 client.
-func Configure(region *string, S3credentials *S3Credentials) (*session.Session, error) {
-	return session.NewSession(&aws.Config{
+func Configure(region *string, S3credentials *S3Credentials) (*s3.S3, error) {
+	sess, err := session.NewSession(&aws.Config{
 		Region:      region,
 		Credentials: credentials.NewStaticCredentials(S3credentials.ID, S3credentials.Secret, S3credentials.Token),
 	})
+
+	if err != nil {
+		return nil, err
+	}
+
+	return s3.New(sess), nil
 }
 
 // UploadFile uploads file to S3.
