@@ -39,3 +39,18 @@ func Consume(ch *amqp.Channel, queueName string) (<-chan amqp.Delivery, error) {
 
 	return msgs, err
 }
+
+// Publish publishes a message to a specif queue.
+func Publish(ch *amqp.Channel, exchange, queueName, msg string) error {
+	err := ch.Publish(
+		exchange,
+		queueName,
+		false,
+		false,
+		amqp.Publishing{
+			ContentType: "text/plain",
+			Body:        []byte(msg),
+		})
+
+	return err
+}
