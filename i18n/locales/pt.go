@@ -44,7 +44,7 @@ func GetBrazilianPortugueseTranslation() *map[string]string {
 		"type_field_required": "campo de tipo é obrigatório",
 		"type_field_invalid":  "campo de tipo possui valor inválido",
 
-		"user_not_found":           "usuário não encontrado",
+		"user_not_found":           "usuário com os dados informados não foi encontrado",
 		"user_to_block_required":   "campo de quem deve ser bloqueado é obrigatório",
 		"user_to_unblock_required": "campo de quem deve ser bloqueado é obrigatório",
 

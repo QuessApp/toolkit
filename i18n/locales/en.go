@@ -45,7 +45,7 @@ func GetAmericanEnglishTranslations() *map[string]string {
 		"type_field_required": "type field is required",
 		"type_field_invalid":  "type field has invalid value",
 
-		"user_not_found":           "user not found",
+		"user_not_found":           "user with provided information not found",
 		"user_to_block_required":   "user to block field is required",
 		"user_to_unblock_required": "user to unblock field is required",
 

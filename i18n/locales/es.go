@@ -45,7 +45,7 @@ func GetSpanishTranslations() *map[string]string {
 		"type_field_required": "campo de tipo es obligatorio",
 		"type_field_invalid":  "campo de tipo tiene valor inválido",
 
-		"user_not_found":           "usuario no encontrado",
+		"user_not_found":           "no se encontró el usuario con los datos dados",
 		"user_to_block_required":   "campo de usuario a bloquear es obligatorio",
 		"user_to_unblock_required": "campo de usuario a desbloquear es obligatorio",
 
