@@ -100,5 +100,7 @@ func GetAmericanEnglishTranslations() *map[string]string {
 
 		"emails_unkown_login_attempt_subject": "Unkown login attempt",
 		"emails_unkown_login_attempt_body":    "We noticed that someone tried to login to your account, if you did not request this change, please contact us immediately. The location of the login attempt was: ",
+
+		"max_rate_limit": "you can't do this action because you reached the limit of requests, please try again later",
 	}
 }
