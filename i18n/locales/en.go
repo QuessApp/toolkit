@@ -90,7 +90,7 @@ func GetAmericanEnglishTranslations() *map[string]string {
 		"emails_new_question_body":    "You just received a new question from @",
 
 		"emails_forgot_password_subject": "Recovery password",
-		"emails_forgot_password_body":    "You requested a password recovery, to do this, use the following code: ",
+		"emails_forgot_password_body":    "You requested a password recovery, to do this, visit the following link: ",
 
 		"emails_password_changed_subject": "Password changed",
 		"emails_password_changed_body":    "Your password was changed, if you did not request this change, please contact us immediately",

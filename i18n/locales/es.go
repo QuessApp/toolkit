@@ -90,7 +90,7 @@ func GetSpanishTranslations() *map[string]string {
 		"emails_new_question_body":    "Recibiste una pregunta de @",
 
 		"emails_forgot_password_subject": "Recuperación de contraseña",
-		"emails_forgot_password_body":    "Solicitó la recuperación de contraseña, para cambiar su contraseña, use el siguiente código:",
+		"emails_forgot_password_body":    "Solicitó la recuperación de contraseña, para cambiar su contraseña, visita el siguiente enlace:",
 
 		"emails_password_changed_subject": "contraseña cambiada",
 		"emails_password_changed_body":    "Tu contraseña ha sido cambiada exitosamente. Si no ha solicitado un cambio de contraseña, contáctenos de inmediato.",

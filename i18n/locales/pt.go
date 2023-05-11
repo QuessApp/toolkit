@@ -89,7 +89,7 @@ func GetBrazilianPortugueseTranslation() *map[string]string {
 		"emails_new_question_body":    "Você recebeu uma pergunta de @",
 
 		"emails_forgot_password_subject": "Recuperação de senha",
-		"emails_forgot_password_body":    "Você solicitou a recuperação de senha, para alterar sua senha, use o código abaixo: ",
+		"emails_forgot_password_body":    "Você solicitou a recuperação de senha, para alterar sua senha, acesse o seguinte link: ",
 
 		"emails_password_changed_subject": "Senha alterada",
 		"emails_password_changed_body":    "Sua senha foi alterada com sucesso. Se você não solicitou a alteração de senha, entre em contato conosco imediatamente",
